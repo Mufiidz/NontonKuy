@@ -18,7 +18,7 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "MOVIEDB_APIKEY", "\"626db7a43e91d54e53c035dfb8cef88c\"")
+        buildConfigField("String", "MOVIEDB_APIKEY", "\"[YOUR_MOVIEDB_APIKEY]\"")
     }
 
     buildTypes {
