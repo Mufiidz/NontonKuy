@@ -31,4 +31,19 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <style name="LightAppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Primary">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottomsheet_fragment</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
 </resources>

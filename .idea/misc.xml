@@ -3,7 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/bg_bottom_rounded.xml" value="0.1935185185185185" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/bg_bottomsheet_fragment.xml" value="0.15833333333333333" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/btn_dropdown.xml" value="0.1984375" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1984375" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.1984375" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/ic_baseline_arrow_drop_up_24.xml" value="0.1984375" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/ic_baseline_drag_handle_24.xml" value="0.1984375" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/ic_baseline_keyboard_arrow_up_24.xml" value="0.1984375" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1984375" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/drawable/top_rounded_background.xml" value="0.1935185185185185" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout-night/fragment_appbar_list.xml" value="0.14356884057971014" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout-night/fragment_detail.xml" value="0.18229166666666666" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/activity_detail.xml" value="0.11322463768115942" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/activity_main.xml" value="0.11322463768115942" />
         <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/fragment_appbar_list.xml" value="0.1068840579710145" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/fragment_credits_list.xml" value="0.22" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/fragment_detail.xml" value="0.3333333333333333" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_credits.xml" value="0.4466666666666667" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_credits_header.xml" value="0.13333333333333333" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_credits_horizontal.xml" value="0.40840140023337224" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_credits_more.xml" value="0.3333333333333333" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_detail_credits.xml" value="0.11865942028985507" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_detail_header.xml" value="0.16666666666666666" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_detail_overview.xml" value="0.14175724637681159" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_info_base.xml" value="0.13994565217391305" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_info_rating.xml" value="0.22" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_info_release.xml" value="0.13994565217391305" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_list_credits.xml" value="0.17300724637681159" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_lsit_credits.xml" value="0.22" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_movie.xml" value="0.11684782608695653" />
+        <entry key="..\:/Project/AndroidStudio/NontonKuy/app/src/main/res/layout/item_movie_credits.xml" value="0.4466666666666667" />
       </map>
     </option>
   </component>

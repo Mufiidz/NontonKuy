@@ -8,4 +8,7 @@
 <!--    <color name="colorAccent">#009DFF</color>-->
     <color name="red">@android:color/holo_red_dark</color>
     <color name="black1">#80000000</color>
+    <color name="grey">@android:color/darker_gray</color>
+    <color name="darkTheme">#121212</color>
+    <color name="appbarDarkTheme">#1f1f1f</color>
 </resources>

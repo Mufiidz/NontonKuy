@@ -19,11 +19,6 @@ class MovieAdapter : BaseAdapter<MovieEntity, Any>() {
         (holder as? ViewHolder)?.bind(list[position])
     }
 
-    override fun setData(item: List<MovieEntity>) {
-        this.list = item
-        notifyDataSetChanged()
-    }
-
     inner class ViewHolder(private val binding: ItemMovieBinding) :
         BaseViewHolder<MovieEntity>(binding.root) {
 
@@ -32,10 +27,11 @@ class MovieAdapter : BaseAdapter<MovieEntity, Any>() {
                 tvTitleItemMovie.text = item.title
                 imgItemMovie.load(item.getUrlPosterImage())
                 itemView.setOnClickListener {
-                    item.id?.let { onItemListener?.onItemClick(it) }
+                    item.id?.let {
+                        onItemListener?.onItemClick(it)
+                    }
                 }
             }
         }
-
     }
 }

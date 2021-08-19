@@ -1,10 +1,8 @@
 package com.mufidz.nontonkuy.entity
 
 import android.os.Parcelable
-import androidx.annotation.Keep
 import com.mufidz.nontonkuy.utils.Const
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -20,10 +18,10 @@ data class TvEntity(
 ) : Parcelable {
 
     fun getUrlPosterImage() = posterPath?.takeIf { it.isNotEmpty() }?.let {
-        "${Const.BASE_IMAGE_URL}$it"
+        "${Const.BASE_IMAGE_URL2}$it"
     }.orEmpty()
 
     fun getUrlBackDropImage() = backdropPath?.takeIf { it.isNotEmpty() }?.let {
-        "${Const.BASE_IMAGE_URL}$it"
+        "${Const.BASE_IMAGE_URL2}$it"
     }.orEmpty()
 }

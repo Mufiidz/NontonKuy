@@ -10,24 +10,24 @@ import kotlinx.coroutines.withContext
 class GetDiscoverMovie(
     private val dataManager: DataManagerRepository,
     private val dispatcher: DispatcherProvider
-) : BaseUseCase<Nothing, RetrofitResult<MovieListResponse>, DiscoverDataResult>(
+) : BaseUseCase<Nothing, RetrofitResult<MovieListResponse>, ListMovieDataResult>(
         dispatcher.dispatcherIO()
 ) {
 
     override suspend fun execute(param: Nothing?): RetrofitResult<MovieListResponse> =
         dataManager.loadDiscoverMovie()
 
-    override suspend fun RetrofitResult<MovieListResponse>.transformToUseCaseResult(): DiscoverDataResult {
+    override suspend fun RetrofitResult<MovieListResponse>.transformToUseCaseResult(): ListMovieDataResult {
         return when (this) {
             is RetrofitResult.Success -> {
                 val data = withContext(dispatcher.default()) {
                     this@transformToUseCaseResult.value.results.moviesTransforms()
                 }
-                DiscoverDataResult.Success(data)
+                ListMovieDataResult.Success(data)
             }
-            is RetrofitResult.Error -> DiscoverDataResult.Failed(this.exception.message())
+            is RetrofitResult.Error -> ListMovieDataResult.Failed(this.exception.message())
             is RetrofitResult.Exception ->
-                DiscoverDataResult.Failed(this.throwable.localizedMessage.orEmpty())
+                ListMovieDataResult.Failed(this.throwable.localizedMessage.orEmpty())
         }
     }
 }

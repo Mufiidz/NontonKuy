@@ -1,9 +1,9 @@
 package com.mufidz.nontonkuy.ui.movie
 
+import com.mufidz.nontonkuy.base.Section
 import com.mufidz.nontonkuy.entity.MovieEntity
 
-sealed class MovieSection {
-    abstract val viewType: Int
+sealed class MovieSection : Section() {
 
     companion object {
         const val NOW_PLAYING_MOVIE = 1

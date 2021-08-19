@@ -1,11 +1,10 @@
 package com.mufidz.nontonkuy.ui.movie
 
-import com.mufidz.nontonkuy.data.DiscoverDataResult
+import com.mufidz.nontonkuy.data.ListMovieDataResult
 import com.mufidz.nontonkuy.data.NowPlayingDataResult
 
-
 interface MovieRepository {
-    suspend fun getDiscoverMovie(): DiscoverDataResult
+    suspend fun getDiscoverMovie(): ListMovieDataResult
     suspend fun getNowPlaying() : NowPlayingDataResult
 }
 

@@ -6,10 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.mufidz.nontonkuy.base.BaseViewModel
 import com.mufidz.nontonkuy.base.UseCaseResult
 import com.mufidz.nontonkuy.base.ViewSideEffect
-import com.mufidz.nontonkuy.data.DiscoverDataResult
+import com.mufidz.nontonkuy.data.ListMovieDataResult
 import com.mufidz.nontonkuy.data.NowPlayingDataResult
 import com.mufidz.nontonkuy.entity.MovieEntity
-import com.mufidz.nontonkuy.utils.DataState
 import com.mufidz.nontonkuy.utils.callUseCase
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
@@ -20,8 +19,8 @@ class MovieViewModel(private val movieRepository: MovieRepository) :
 
     override fun renderViewState(result: UseCaseResult?): DataState<MovieEntity> {
         return when (result) {
-            is DiscoverDataResult -> result.mapDiscoverMovie()
-            is NowPlayingDataResult -> result.mapNowPlayingMovie()
+            is ListMovieDataResult -> result.mapDiscoverMovie()
+            is NowPlayingDataResult -> result.mapNowPlaying()
             else -> getCurrentViewState()
         }
     }
@@ -42,24 +41,24 @@ class MovieViewModel(private val movieRepository: MovieRepository) :
         }
 
 
-    private fun DiscoverDataResult.mapDiscoverMovie(): DataState<MovieEntity> {
+    private fun ListMovieDataResult.mapDiscoverMovie(): DataState<MovieEntity> {
         return when (this) {
-            is DiscoverDataResult.Success -> getCurrentViewState().copy(
+            is ListMovieDataResult.Success -> getCurrentViewState().copy(
                 discoverList = data, isLoading = false
             )
-            is DiscoverDataResult.Failed -> getCurrentViewState().copy(
-                errorMessage = reason, isLoading = false
+            is ListMovieDataResult.Failed -> getCurrentViewState().copy(
+                errorMessage = message, isLoading = false
             )
         }
     }
 
-    private fun NowPlayingDataResult.mapNowPlayingMovie(): DataState<MovieEntity> {
+    private fun NowPlayingDataResult.mapNowPlaying(): DataState<MovieEntity> {
         return when (this) {
             is NowPlayingDataResult.Success -> getCurrentViewState().copy(
                 nowPlayingList = data, isLoading = false
             )
             is NowPlayingDataResult.Failed -> getCurrentViewState().copy(
-                errorMessage = reason, isLoading = false
+                errorMessage = message, isLoading = false
             )
         }
     }

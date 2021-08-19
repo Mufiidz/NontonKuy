@@ -7,16 +7,18 @@ import com.mufidz.nontonkuy.R
 import com.mufidz.nontonkuy.base.BaseFragment
 import com.mufidz.nontonkuy.databinding.FragmentAppbarListBinding
 import com.mufidz.nontonkuy.ui.movie.MovieViewModel
+import com.mufidz.nontonkuy.utils.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FragmentListCatalogue : BaseFragment<FragmentAppbarListBinding, MovieViewModel>(
-    R.layout.fragment_appbar_list,
-    FragmentAppbarListBinding::bind
+    R.layout.fragment_appbar_list
 ) {
 
     private val args by navArgs<FragmentListCatalogueArgs>()
 
     override val viewModel by viewModel<MovieViewModel>()
+
+    override val binding: FragmentAppbarListBinding by viewBinding()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,5 +27,4 @@ class FragmentListCatalogue : BaseFragment<FragmentAppbarListBinding, MovieViewM
             toolbar.title = args.title
         }
     }
-
 }

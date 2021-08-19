@@ -1,5 +1,6 @@
 package com.mufidz.nontonkuy.base
 
+import android.annotation.SuppressLint
 import android.os.Parcelable
 import androidx.recyclerview.widget.RecyclerView
 
@@ -11,5 +12,9 @@ abstract class BaseAdapter<Entity : Parcelable, T> : RecyclerView.Adapter<Recycl
 
     override fun getItemCount(): Int = list.size
 
-    abstract fun setData(item: List<Entity>)
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(item: List<Entity>) {
+        list = item
+        notifyDataSetChanged()
+    }
 }

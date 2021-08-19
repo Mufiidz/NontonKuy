@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/fragmentDetailCatalogue"
-        android:name="com.mufidz.nontonkuy.ui.detailcatalogue.FragmentDetailCatalogue"
+        android:name="com.mufidz.nontonkuy.ui.detailcatalogue.DetailCatalogueFragment"
         android:label="Detail Catalogue"
         tools:layout="@layout/fragment_appbar_list">
         <argument
@@ -44,5 +44,18 @@
             app:argType="integer"
             android:defaultValue="0" />
     </fragment>
+
+    <dialog
+        android:id="@+id/dialogCreditsList"
+        android:name="com.mufidz.nontonkuy.ui.credits.CreditsListFragment"
+        android:label="Credits"
+        tools:layout="@layout/fragment_credits_list">
+
+        <argument
+            android:name="credits"
+            app:argType="com.mufidz.nontonkuy.entity.CreditsEntity"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
 
 </navigation>

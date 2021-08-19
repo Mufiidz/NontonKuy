@@ -1,8 +1,10 @@
 package com.mufidz.nontonkuy.ui.movie
 
+import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mufidz.nontonkuy.R
+import com.mufidz.nontonkuy.base.BaseSection
 import com.mufidz.nontonkuy.base.ItemListener
 import com.mufidz.nontonkuy.databinding.ItemHomeMovieBinding
 import com.mufidz.nontonkuy.entity.MovieEntity
@@ -11,11 +13,11 @@ import com.mufidz.nontonkuy.ui.movie.viewholder.FavoriteMovieViewHolder
 import com.mufidz.nontonkuy.ui.movie.viewholder.NowPlayingMovieViewHolder
 import com.mufidz.nontonkuy.utils.inflate
 
-class MovieHomeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-    private val section = MovieSection.getLayout()
+class MovieHomeAdapter : BaseSection<MovieSection>() {
 
     var onItemListener: ItemListener<Any>? = null
+
+    override val section: MutableList<MovieSection> = MovieSection.getLayout()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
@@ -37,10 +39,6 @@ class MovieHomeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
     }
 
-    override fun getItemCount(): Int = section.size
-
-    override fun getItemViewType(position: Int): Int = section[position].viewType
-
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         holder.apply {
             when (this) {
@@ -59,6 +57,7 @@ class MovieHomeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setDiscoverMovie(list: List<MovieEntity>) {
         getSectionPosition(MovieSection.DISCOVER_MOVIE)?.let {
             section[it] = MovieSection.getDiscoverMovie(list)
@@ -66,14 +65,11 @@ class MovieHomeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setNowPlayingMovie(list: List<MovieEntity>) {
         getSectionPosition(MovieSection.NOW_PLAYING_MOVIE)?.let {
             section[it] = MovieSection.getNowPlaying(list)
             notifyDataSetChanged()
         }
     }
-
-    private fun getSectionPosition(type: Int): Int? =
-        section.indexOf(section.find { it.viewType == type }).takeIf { it >= 0 }
-
 }

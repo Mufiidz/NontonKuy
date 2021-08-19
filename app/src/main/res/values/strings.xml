@@ -6,4 +6,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="discover">Discover</string>
+    <string name="release_date">Release Date</string>
+    <string name="overview">Overview</string>
+    <string name="show_more">Show More</string>
+    <string name="show_less">Show Less</string>
+    <string name="txt_with">with</string>
+    <string name="txt_vote">vote</string>
+    <string name="cast">Cast</string>
+    <string name="see_more">See more</string>
+    <string name="credits">Credits</string>
+    <string name="similar">Similar</string>
+    <string name="recommendations">Recommendations</string>
 </resources>
